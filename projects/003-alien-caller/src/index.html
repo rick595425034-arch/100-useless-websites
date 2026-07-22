@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>深空文明呼叫终端</title>
+    <link rel="stylesheet" href="app.css" />
+  </head>
+  <body class="terminal-page">
+    <main class="terminal-shell" id="terminalShell">
+      <header class="terminal-topbar">
+        <div class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></div>
+        <div class="brand-copy">
+          <small>DEEP SPACE CONTACT AUTHORITY</small>
+          <strong>深空文明主动联络终端</strong>
+        </div>
+        <div class="system-state"><i></i><span>本地节点在线</span><b>CN-031</b></div>
+      </header>
+
+      <section class="terminal-workspace">
+        <aside class="mission-panel">
+          <div class="section-label">MISSION PARAMETERS</div>
+          <dl>
+            <div><dt>呼叫类型</dt><dd>未知文明</dd></div>
+            <div><dt>覆盖半径</dt><dd id="rangeValue">0.00 LY</dd></div>
+            <div><dt>扫描节点</dt><dd id="nodeValue">000,000</dd></div>
+            <div><dt>协议置信度</dt><dd id="confidenceValue">0.0%</dd></div>
+          </dl>
+          <div class="permission-card" id="permissionCard">
+            <span>LOCAL ENVIRONMENT SYNC</span>
+            <strong id="permissionLabel">正在检测桌面捕获状态</strong>
+            <button type="button" id="permissionButton" hidden>允许本地环境同步</button>
+          </div>
+        </aside>
+
+        <section class="contact-field">
+          <div class="sky-grid" aria-hidden="true"></div>
+          <div class="radar" id="radar" aria-hidden="true">
+            <i class="orbit orbit-one"></i>
+            <i class="orbit orbit-two"></i>
+            <i class="orbit orbit-three"></i>
+            <i class="radar-beam"></i>
+            <b class="signal-point point-one"></b>
+            <b class="signal-point point-two"></b>
+            <b class="signal-point point-three"></b>
+            <span class="earth-core"><em></em></span>
+          </div>
+
+          <div class="mission-copy" id="missionCopy">
+            <p>NON-TERRESTRIAL COMMUNICATION</p>
+            <h1>向宇宙发起<br />一次实时呼叫</h1>
+            <span>系统将自动寻找能够理解地球通信协议的接收方</span>
+          </div>
+
+          <button class="launch-button" id="launchButton" type="button" disabled>
+            <span>向宇宙发送呼叫</span>
+            <small>INITIATE DEEP SPACE CONTACT</small>
+          </button>
+
+          <div class="processing-copy" id="processingCopy" aria-live="polite">
+            <span id="stageCode">DSC / 01</span>
+            <strong id="stageTitle">校准本地星际坐标</strong>
+            <p id="stageDetail">正在锁定太阳系相对位置</p>
+          </div>
+        </section>
+
+        <aside class="sequence-panel">
+          <div class="section-label">CONTACT SEQUENCE</div>
+          <ol id="stageList">
+            <li><span>01</span><div><b>校准本地星际坐标</b><i>待执行</i></div></li>
+            <li><span>02</span><div><b>穿透太阳风干扰层</b><i>待执行</i></div></li>
+            <li><span>03</span><div><b>扫描宜居星球信号</b><i>待执行</i></div></li>
+            <li><span>04</span><div><b>建立非人类协议握手</b><i>待执行</i></div></li>
+            <li><span>05</span><div><b>翻译未知通信语法</b><i>待执行</i></div></li>
+            <li><span>06</span><div><b>接入地球通信网络</b><i>待执行</i></div></li>
+          </ol>
+        </aside>
+      </section>
+
+      <footer class="terminal-footer">
+        <div><span id="footerState">系统待命</span><small id="footerDetail">未向深空发送任何本地数据</small></div>
+        <div class="progress"><i id="progressBar"></i></div>
+        <b id="progressValue">00%</b>
+      </footer>
+
+      <div class="incoming-mask" id="incomingMask">
+        <span>INBOUND SIGNAL DETECTED</span>
+        <strong>接收方正在选择地球端通信方式</strong>
+      </div>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

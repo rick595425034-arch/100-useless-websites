@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>微信语音通话</title>
+    <link rel="stylesheet" href="call.css" />
+  </head>
+  <body>
+    <main class="call-card" id="callCard">
+      <div class="call-noise" aria-hidden="true"></div>
+      <header><b>微信</b><i>语音通话</i></header>
+      <section class="caller">
+        <div class="avatar" aria-hidden="true"><i></i><i></i><i></i><b>?</b></div>
+        <h1 id="callerName">未知星际联系人</h1>
+        <p id="callStatus">距地球 4.24 光年 · 邀请你语音通话</p>
+        <small id="protocol">UNKNOWN CONTACT / LOCAL BRIDGE 99.8%</small>
+      </section>
+      <div class="waveform" id="waveform" aria-hidden="true">
+        <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+      </div>
+      <section class="call-actions" id="callActions">
+        <button type="button" class="reject" id="rejectButton"><i></i><span>拒绝</span></button>
+        <button type="button" class="accept" id="acceptButton"><i></i><span>接听</span></button>
+      </section>
+      <div class="connected-actions" id="connectedActions" hidden>
+        <button type="button" id="hangupButton">结束通话</button>
+      </div>
+    </main>
+    <script src="call.js"></script>
+  </body>
+</html>

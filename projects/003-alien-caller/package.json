@@ -1,0 +1,68 @@
+{
+  "name": "deep-space-contact-terminal",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A cinematic deep-space contact terminal and safe desktop takeover performance.",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test tests/*.test.mjs",
+    "build:screen-access": "node scripts/build-screen-access.cjs",
+    "pack:mac": "npm run build:screen-access && CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac dir --config.electronDist=node_modules/electron/dist",
+    "dist:mac": "npm run build:screen-access && CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac dmg --config.electronDist=node_modules/electron/dist"
+  },
+  "devDependencies": {
+    "electron": "^43.1.1",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.rick.deep-space-contact",
+    "productName": "深空文明呼叫终端",
+    "asar": true,
+    "afterSign": "scripts/after-sign.cjs",
+    "directories": {
+      "output": "release",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**/*",
+      "src/**/*",
+      "assets/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "electron/screen-access.node",
+        "to": "screen-access.node"
+      }
+    ],
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.entertainment",
+      "icon": "build/deep-space.icns",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "artifactName": "DEEP-SPACE-CONTACT-${version}-${arch}.${ext}",
+      "extendInfo": {
+        "NSScreenCaptureUsageDescription": "用于在本机生成桌面视觉特效；不会移动、修改或上传任何文件。"
+      }
+    },
+    "dmg": {
+      "title": "深空文明呼叫终端",
+      "backgroundColor": "#05090b",
+      "iconSize": 96,
+      "contents": [
+        {
+          "x": 180,
+          "y": 180
+        },
+        {
+          "x": 480,
+          "y": 180,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}

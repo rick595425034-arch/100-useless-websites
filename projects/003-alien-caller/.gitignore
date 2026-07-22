@@ -1,0 +1,6 @@
+node_modules/
+release/
+.DS_Store
+electron/screen-access.node
+*.dmg
+npm-debug.log*

@@ -3,7 +3,7 @@
   "challenge": {
     "title": "挑战 100 个整活网站",
     "target": 100,
-    "current": 2
+    "current": 3
   },
   "projects": [
     {
@@ -24,6 +24,16 @@
       "format": "web-and-macos",
       "status": "complete",
       "start": "npm run dev",
+      "test": "npm test"
+    },
+    {
+      "id": 3,
+      "slug": "alien-caller",
+      "title": "深空文明呼叫终端",
+      "path": "projects/003-alien-caller",
+      "format": "macos",
+      "status": "complete",
+      "start": "npm start",
       "test": "npm test"
     }
   ]

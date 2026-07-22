@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>远程视觉层</title>
+    <link rel="stylesheet" href="takeover.css" />
+  </head>
+  <body>
+    <div class="fallback-desktop" id="fallbackDesktop" aria-hidden="true">
+      <div class="fallback-menu"></div><div class="fallback-dock"></div>
+    </div>
+    <div class="desktop-base" id="desktopBase"></div>
+    <div class="vacuum-wash" aria-hidden="true"></div>
+    <div class="abduction-objects" id="abductionObjects" aria-hidden="true"></div>
+    <canvas class="particle-field" id="particleField" aria-hidden="true"></canvas>
+    <div class="screen-damage" aria-hidden="true"></div>
+    <div class="auto-reply" id="autoReply" aria-live="assertive">
+      <div class="translation-flow">
+        <div class="translation-source">
+          <small>你的原始拒接理由</small>
+          <b>“我现在不方便接听”</b>
+        </div>
+        <div class="translation-engine">
+          <i><b></b><b></b><b></b></i>
+          <strong>大模型高情商翻译中……</strong>
+          <span><i></i></span>
+        </div>
+        <div class="translation-result">
+          <small>大模型高情商翻译结果</small>
+          <b>“贵文明暂未达到本用户的通话标准。”</b>
+          <em id="deliveryState">正在发送至来电文明</em>
+        </div>
+      </div>
+      <div class="typing-status" id="typingStatus">
+        <div class="typing-heading">
+          <i class="typing-dots"><b></b><b></b><b></b></i>
+          <strong id="typingText">对方正在输入……</strong>
+        </div>
+        <div class="alien-draft">
+          <small>远端草稿 · 尚未发送</small>
+          <div><b id="alienDraft"></b><i></i></div>
+          <em id="draftState">正在接收字符</em>
+        </div>
+      </div>
+    </div>
+    <div class="abduction-beam" aria-hidden="true"><i></i></div>
+    <div class="beam-rings" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="ufo-flight" aria-hidden="true">
+      <div class="ufo"><img src="../assets/ufo-transparent-v2.png" alt="" /><i></i></div>
+    </div>
+    <div class="takeover-status" id="takeoverStatus">
+      <span>SEMANTIC COURTESY ENGINE / CASE #0001</span>
+      <strong>正在读取你的拒接理由</strong>
+      <small>原文：我现在不方便接听</small>
+    </div>
+    <div class="blackout" aria-hidden="true"></div>
+    <div class="final-message" id="finalMessage" aria-live="assertive">
+      <span>DISCONNECTION COMPLETE</span>
+      <h1>对方没有继续反驳</h1>
+      <p>
+        <span class="result-data">对方已带走电脑里的所有资料</span>
+        <span class="result-device">设备本体已为你保留。</span>
+      </p>
+      <div class="unlock-panel" id="unlockPanel">
+        <span>DEVICE RELEASE SCHEDULE</span>
+        <b>设备使用权恢复倒计时</b>
+        <strong id="unlockCountdown">9999年 364天 23:59:59</strong>
+        <small>精确到秒 · 预计很快</small>
+        <div class="ai-comfort">
+          <span>大模型贴心解读</span>
+          <strong>好消息：对方祝福你能活一万岁</strong>
+        </div>
+        <em>按 ESC 提前解锁（可能影响星际信用分）</em>
+      </div>
+    </div>
+    <script src="takeover.js"></script>
+  </body>
+</html>

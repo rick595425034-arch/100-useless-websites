@@ -1,0 +1,15 @@
+{
+  "name": "100-useless-websites",
+  "version": "0.1.0",
+  "private": true,
+  "description": "挑战 100 个看起来很有用、实际上完全没用的整活网站。",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "list": "node scripts/list-projects.mjs",
+    "test": "node --test tests/catalog.test.mjs"
+  },
+  "license": "MIT"
+}

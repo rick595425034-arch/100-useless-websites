@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "challenge": {
+    "title": "挑战 100 个整活网站",
+    "target": 100,
+    "current": 2
+  },
+  "projects": [
+    {
+      "id": 1,
+      "slug": "world-shortest-route",
+      "title": "全球路径决策系统",
+      "path": "projects/001-world-shortest-route",
+      "format": "web-and-macos",
+      "status": "complete",
+      "start": "npm run dev",
+      "test": "npm test"
+    },
+    {
+      "id": 2,
+      "slug": "ultimate-resolution-system",
+      "title": "一切难题终极化解系统",
+      "path": "projects/002-ultimate-resolution-system",
+      "format": "web-and-macos",
+      "status": "complete",
+      "start": "npm run dev",
+      "test": "npm test"
+    }
+  ]
+}

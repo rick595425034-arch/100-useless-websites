@@ -1,0 +1,52 @@
+{
+  "name": "wealth-freedom-system-desktop",
+  "version": "0.1.0",
+  "description": "AUREUS 财富自由实现系统桌面版",
+  "author": "挑战 100 个整活网站",
+  "private": true,
+  "main": "main.cjs",
+  "build": {
+    "appId": "com.rick.wealth-freedom",
+    "electronVersion": "43.2.0",
+    "productName": "财富自由实现系统",
+    "artifactName": "WEALTH-FREEDOM-SYSTEM-${version}-${arch}.${ext}",
+    "directories": {
+      "buildResources": ".",
+      "output": "../release"
+    },
+    "files": [
+      "main.cjs",
+      "site/**/*"
+    ],
+    "asar": true,
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "category": "public.app-category.entertainment",
+      "identity": "-",
+      "icon": "AUREUS.icns"
+    },
+    "dmg": {
+      "title": "财富自由实现系统",
+      "backgroundColor": "#070907",
+      "iconSize": 104,
+      "window": {
+        "width": 560,
+        "height": 380
+      },
+      "contents": [
+        {
+          "x": 155,
+          "y": 190
+        },
+        {
+          "x": 405,
+          "y": 190,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}

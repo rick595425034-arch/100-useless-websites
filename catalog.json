@@ -3,7 +3,7 @@
   "challenge": {
     "title": "挑战 100 个整活网站",
     "target": 100,
-    "current": 3
+    "current": 4
   },
   "projects": [
     {
@@ -34,6 +34,16 @@
       "format": "macos",
       "status": "complete",
       "start": "npm start",
+      "test": "npm test"
+    },
+    {
+      "id": 4,
+      "slug": "wealth-freedom-system",
+      "title": "财富自由实现系统",
+      "path": "projects/004-wealth-freedom-system",
+      "format": "web-and-macos",
+      "status": "complete",
+      "start": "npm run dev",
       "test": "npm test"
     }
   ]

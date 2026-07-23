@@ -4,7 +4,7 @@
 
 这里收录伪高端决策系统与其他没用但认真制作的互动网站。每个作品都是独立项目，可以单独安装、运行、测试和打包；总仓库只负责统一编号、目录与质量检查。
 
-> 当前进度：**3 / 100**
+> 当前进度：**4 / 100**
 
 ## 已收录项目
 
@@ -13,6 +13,7 @@
 | 001 | [全球路径决策系统](./projects/001-world-shortest-route) | Web / macOS | 用极其专业的流程计算几何意义上的最短路线 | 已完成 |
 | 002 | [一切难题终极化解系统](./projects/002-ultimate-resolution-system) | Web / macOS | 对任何复杂问题进行六阶段终极化解 | 已完成 |
 | 003 | [深空文明呼叫终端](./projects/003-alien-caller) | macOS | 向未知文明发起呼叫，拒接后事情逐渐超出桌面应用的职责范围 | 已完成 |
+| 004 | [财富自由实现系统](./projects/004-wealth-freedom-system) | Web / macOS | 用最高规格的系统为资产解除一切限制，让财富真正获得自由 | 已完成 |
 
 ## 如何运行
 
@@ -33,6 +34,7 @@ projects/
   001-world-shortest-route/       全球路径决策系统
   002-ultimate-resolution-system/ 一切难题终极化解系统
   003-alien-caller/                深空文明呼叫终端
+  004-wealth-freedom-system/       财富自由实现系统
 scripts/                          清单与 CI 校验工具
 tests/                            总仓库结构测试
 catalog.json                      机器可读的项目目录
